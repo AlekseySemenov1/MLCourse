@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 DecisionTreeClassifier(criterion='entropy', min_samples_leaf=20, max_leaf_nodes=30, random_state=2020)
 Для визуализации дерева принятия решений можете воспользоваться библиотекой graphviz и кодом (где x — тренировочный набор данных, clf — обученное ДПР):
-
+```python3
 from sklearn.tree import export_graphviz
 import graphviz
 columns = list(x.columns)
@@ -24,7 +24,7 @@ with open('tree.dot') as f:
     dot_graph = f.read()
 
 graphviz.Source(dot_graph)
-
+```
 ## Часть 1
 Скачайте [исходный набор данных](/Data/Dec_tree.csv) и отделите от него первые 670 строк.  
 1) Введите число строк в получившейся выборке относящихся к классу 0 (пациент не болен диабетом). 
